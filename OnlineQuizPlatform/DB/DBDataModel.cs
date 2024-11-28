@@ -14,6 +14,7 @@ namespace OnlineQuizPlatform.DB
         public List<Question> Questions { get; set; }
         public List<User> Users { get; set; }
         public List<Test> Tests { get; set; }
+        public List<Quiz> Quizzes { get; set; }
 
     }
 }

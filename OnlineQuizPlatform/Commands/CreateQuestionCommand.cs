@@ -12,11 +12,11 @@ namespace OnlineQuizPlatform.Commands
     {
         public string Text { get; set; }
         public int QuestionID { get; set; }
-        public List<PossibleAnswers> _PossibleAnswer { get; set; }
-        public List<CorrectAnswers> CorrectAnswer { get; set; }
+        public List<Answers> _PossibleAnswer { get; set; }
+        public List<Answers> CorrectAnswer { get; set; }
         public int QuestionScore { get; set; }
         public bool AllowsMultipleAnswers { get; set; }
-        public PossibleAnswers TextAnswer { get; set; }
+        public Answers TextAnswer { get; set; }
 
         public void Validate()
         {
@@ -32,7 +32,7 @@ namespace OnlineQuizPlatform.Commands
                 throw new ValidationException("Text Score must be min 1 or max 5");
             if (!CorrectAnswer.All(correct => _PossibleAnswer.Any(possible => possible.Text == correct.Text)))
                 throw new ValidationException("Correct answers must be part of the possible answers.");
-            if (CorrectAnswer.Select(answer => answer.CorrectAnswerID).Distinct().Count() != CorrectAnswer.Count)
+            if (CorrectAnswer.Select(answer => answer.ID).Distinct().Count() != CorrectAnswer.Count)
                 throw new ValidationException("Correct answers must not contain duplicates.");
             
 

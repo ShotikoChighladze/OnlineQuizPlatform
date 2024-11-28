@@ -8,6 +8,8 @@ namespace OnlineQuizPlatform.Models
 {
     public class CostumerAnswer
     {
-        public int ID { get; set; }
+        public Guid QuestionId { get; set; }
+        public List<Answers> Answers { get; set; }
+
     }
 }

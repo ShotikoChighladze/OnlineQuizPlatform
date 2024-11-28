@@ -14,8 +14,8 @@ namespace OnlineQuizPlatform.Models
         }
         public Guid Id { get; set; }
         public string Title { get; set; }
-        public TimeSpan Duration { get; set; }
-        public List<int> QuestionIds { get; set; } 
+       
+        public List<Guid> QuestionIds { get; set; } 
     }
 
 }

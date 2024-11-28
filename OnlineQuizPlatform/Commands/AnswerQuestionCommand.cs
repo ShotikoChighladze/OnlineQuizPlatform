@@ -1,0 +1,15 @@
+﻿using OnlineQuizPlatform.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace OnlineQuizPlatform.Commands
+{
+    public class AnswerQuestionCommand
+    {
+        public Guid quizId { get; set; }
+        public CostumerAnswer costumerAnswers { get; set; }
+    }
+}

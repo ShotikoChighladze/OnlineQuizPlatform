@@ -5,7 +5,7 @@ using OnlineQuizPlatform.Repositorys;
 
 namespace OnlineQuizPlatform.Service
 {
-    internal class TestService
+    public class TestService
     {
         private TestRepository _testRepository;
         public TestService()
@@ -18,7 +18,6 @@ namespace OnlineQuizPlatform.Service
 
             var test = new Test()
             {
-                Duration = command.Duration,
                 QuestionIds = command.QuestionIds,
                 Title = command.Title
             };
