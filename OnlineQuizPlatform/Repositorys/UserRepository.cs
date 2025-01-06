@@ -8,7 +8,7 @@ using OnlineQuizPlatform.Models;
 
 namespace OnlineQuizPlatform.Repositorys
 {
-    internal class UserRepository
+    public class UserRepository
     {
 
         public User? GetById(Guid id)
